@@ -46,7 +46,7 @@ TailwindCSS
  (cloud-hosted database)
 
  ## Project Structure
-
+```
  IMS-main/
 │
 ├── client/                  # Frontend (React + Vite)
@@ -70,20 +70,22 @@ TailwindCSS
 │
 ├── .env                     # Environment variables (local)
 ├── package.json             # Root config (start scripts)
-└── README.md
+```
 
 ## Installation
 
 ### 1. Clone the repository
+```bash
 git clone https://github.com/<your-username>/IMS-main.git
 cd IMS-main
-
+```
 ### 2. Install dependencies
+```bash
 npm install
 cd client && npm install
 cd ../server/RESTserver && npm install
 cd ../GRAPHQLserver && npm install
-
+```
 ### 3. Create a .env file in RESTserver and GRAPHQLserver
 
 DATABASE=mongodb+srv://<USER>:<PASSWORD>@cluster.mongodb.net/<DB_NAME>?retryWrites=true&w=majority
@@ -94,9 +96,10 @@ PORT=3000   # for the REST server
 ### ⚠️ Don’t forget to create a separate .env file in the GraphQL server as well (with port 4000).
 
 ### 4. Start the project
+```env
  From the root:
  npm start
-
+```
 ### This will start:
 
 Client → http://localhost:5173
@@ -119,7 +122,7 @@ GraphQL API → http://localhost:4000
 
 ## GraphQL API
 ### Example query:
-
+```
 query {
   products {
     id
@@ -129,9 +132,10 @@ query {
     amountInStock
   }
 }
-
+```
 
 ### Example mutation:
+```
 mutation {
   addProduct(input: {
     name: "Laptop",
@@ -144,10 +148,10 @@ mutation {
     name
   }
 }
-
+```
 ## 🧾 Example Data
 ### Product
-
+```
 {
   "name": "Apple MacBook Pro",
   "description": "Powerful laptop for professionals",
@@ -166,7 +170,7 @@ mutation {
     }
   }
 }
-
+```
 ## 📌 Notes
 
 SKU is a unique ID for each product in stock. Example: LAP-APPLE-MBP-13.
